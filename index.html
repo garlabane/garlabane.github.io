@@ -80,19 +80,26 @@ section.bloc { padding: 60px 0 20px; }
 .titre-bloc { display: flex; justify-content: space-between; align-items: end; gap: 20px; flex-wrap: wrap; margin-bottom: 26px; }
 .titre-bloc h2 { font-size: clamp(30px, 4vw, 40px); margin: 0; color: var(--prune); }
 .titre-bloc p { margin: 0; color: var(--doux); }
-.projets { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.projets { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
 .projet { --accent: var(--prune); position: relative; background: var(--panneau); border: 1px solid var(--bord); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column; text-decoration: none; color: inherit; transition: transform .2s, box-shadow .2s; }
 .projet::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 5px; background: var(--accent); z-index: 1; }
 @media (hover: hover) { .projet:hover { transform: translateY(-4px); box-shadow: 0 16px 36px rgba(70,35,55,.16); } .projet:hover .lien span { transform: translateX(4px); } }
 .projet img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; display: block; }
 .projet .texte { padding: 18px 22px 22px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
 .projet .etiquette { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--accent); }
-.projet h3 { margin: 0; font-size: 26px; color: var(--texte); }
+.projet h3 { margin: 0; font-size: 24px; color: var(--texte); }
 .projet p { margin: 0; color: var(--doux); font-size: 16px; }
 .projet .lien { margin-top: auto; padding-top: 10px; font-weight: 600; color: var(--accent); }
 .projet .lien span { display: inline-block; transition: transform .2s; }
-.vitrine-bijou { aspect-ratio: 16 / 10; display: grid; place-items: center; background: radial-gradient(circle at 30% 30%, #f6e6dc, #ead6c8); }
-.vitrine-bijou span { font-family: var(--titre); font-size: 42px; color: #8a4a3a; font-style: italic; }
+/* ---------- et aussi : la boutique, plus discrète ---------- */
+.aussi { margin-top: 44px; display: flex; align-items: center; gap: 20px; background: var(--panneau); border: 1px solid var(--bord); border-radius: 18px; padding: 16px 22px; text-decoration: none; color: inherit; transition: box-shadow .2s; }
+@media (hover: hover) { .aussi:hover { box-shadow: 0 10px 26px rgba(70,35,55,.12); } }
+.aussi .pastille { flex: none; width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center; background: radial-gradient(circle at 30% 30%, #f6e6dc, #e6cdbd); font-size: 28px; }
+.aussi .txt { flex: 1; }
+.aussi .txt small { display: block; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: #b0644a; }
+.aussi .txt b { font-family: var(--titre); font-size: 20px; }
+.aussi .txt span { display: block; color: var(--doux); font-size: 15px; }
+.aussi .fleche { color: #b0644a; font-weight: 600; white-space: nowrap; }
 
 /* ---------- bientôt ---------- */
 .bientot { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
@@ -117,6 +124,7 @@ footer { padding: 34px 0 44px; color: var(--doux); font-size: 14px; text-align: 
   .accroche .conteneur > :last-child { order: -1; }
   .cadre { width: min(240px, 66vw); }
   .projets { grid-template-columns: 1fr; }
+  .aussi { flex-wrap: wrap; }
   .bientot { grid-template-columns: repeat(2, 1fr); }
   .haut nav { display: none; }
 }
@@ -198,15 +206,6 @@ footer { padding: 34px 0 44px; color: var(--doux); font-size: 14px; text-align: 
           <span class="lien">Découvrir le tuto <span>→</span></span>
         </div>
       </a>
-      <a class="projet" href="https://clayopate.com/" style="--accent:#b0644a">
-        <div class="vitrine-bijou" aria-hidden="true"><span>Clayopate</span></div>
-        <div class="texte">
-          <span class="etiquette">Bijoux · ma boutique</span>
-          <h3>Clayopate</h3>
-          <p>Mes bijoux en argile polymère, faits main, avec un configurateur pour choisir ses couleurs.</p>
-          <span class="lien">Voir la boutique <span>→</span></span>
-        </div>
-      </a>
     </div>
   </div>
 </section>
@@ -223,6 +222,12 @@ footer { padding: 34px 0 44px; color: var(--doux); font-size: 14px; text-align: 
       <div><span class="ico">🖨️</span><b>Impression 3D</b><span>Outils, emporte-pièces et moules.</span></div>
       <div><span class="ico">✂️</span><b>Découpe laser</b><span>Présentoirs, supports et décorations.</span></div>
     </div>
+
+    <a class="aussi" href="https://clayopate.com/">
+      <span class="pastille" aria-hidden="true">💍</span>
+      <span class="txt"><small>Et aussi · ma boutique</small><b>Clayopate</b><span>Mes bijoux en argile polymère, faits main.</span></span>
+      <span class="fleche">Voir →</span>
+    </a>
 
     <div class="suivre">
       <h2>Envie de suivre la suite&nbsp;?</h2>
