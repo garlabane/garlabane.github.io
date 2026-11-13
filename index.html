@@ -7,7 +7,12 @@
 <meta name="description" content="Maman de 2 enfants, j'ai toujours aimé créer et partager. Ici, tous mes projets faits avec l'IA : perles à repasser, généalogie, jeux, révisions, bijoux, impression 3D, découpe laser. Gratuits et partagés.">
 <meta property="og:title" content="Sophie · mes projets créés avec l'IA">
 <meta property="og:description" content="Perles à repasser, généalogie, jeux, révisions, bijoux, 3D, laser : tout est gratuit et partagé.">
-<meta property="og:image" content="https://garlabane.github.io/img/sophie.png">
+<meta property="og:image" content="https://garlabane.github.io/img/apercu.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://garlabane.github.io/">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='8' r='6' fill='%23E8A498'/%3E%3Ccircle cx='8' cy='16' r='6' fill='%23E9C704'/%3E%3Ccircle cx='24' cy='16' r='6' fill='%2349AE89'/%3E%3Ccircle cx='16' cy='24' r='6' fill='%236e2f5c'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,6 +44,8 @@ h1, h2, h3 { font-family: var(--titre); font-weight: 700; letter-spacing: -.01em
 @media (hover: hover) { .haut nav a:hover { color: var(--prune); } }
 
 /* ---------- accroche ---------- */
+.banniere { display: block; }
+.banniere img { display: block; width: 100%; height: auto; border-radius: 22px; box-shadow: 0 10px 30px rgba(60, 25, 50, .14); }
 .accroche { position: relative; overflow: hidden; padding: 40px 0 64px; }
 .accroche::before { /* semis de perles très léger */
   content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .5;
@@ -113,6 +120,10 @@ section.bloc { padding: 60px 0 20px; }
 .suivre::after { content: ""; position: absolute; inset: 0; opacity: .12; pointer-events: none; background-image: radial-gradient(circle, #fff 2.2px, transparent 2.6px); background-size: 26px 26px; }
 .suivre h2 { font-size: clamp(26px, 3.4vw, 34px); margin: 0 0 8px; color: #fff; }
 .suivre p { margin: 0 auto; max-width: 560px; opacity: .92; }
+.suivre .cafe-mot { margin-top: 14px; font-size: 15px; }
+.cafe-bouton { position: relative; z-index: 1; display: inline-block; margin-top: 18px; padding: 12px 24px; border-radius: 999px; background: #fff; color: var(--prune); font-weight: 700; text-decoration: none; }
+@media (hover: hover) { .cafe-bouton:hover { background: var(--prune-clair); } }
+.cafe-nav { white-space: nowrap; }
 @media (prefers-color-scheme: dark) { .suivre { background: #4a2240; } }
 
 footer { padding: 34px 0 44px; color: var(--doux); font-size: 14px; text-align: center; }
@@ -135,7 +146,14 @@ footer { padding: 34px 0 44px; color: var(--doux); font-size: 14px; text-align: 
 
 <div class="conteneur haut">
   <a class="signature" href="./"><i style="background:var(--rose)"></i><i style="background:var(--jaune)"></i><i style="background:var(--vert)"></i>Sophie</a>
-  <nav><a href="#histoire">Mon histoire</a><a href="#projets">Mes projets</a><a href="#bientot">À venir</a></nav>
+  <nav><a href="#histoire">Mon histoire</a><a href="#projets">Mes projets</a><a href="#bientot">À venir</a><a class="cafe-nav" href="https://buymeacoffee.com/garlabane" target="_blank" rel="noopener">☕ Un café</a></nav>
+</div>
+
+<div class="conteneur">
+  <picture class="banniere">
+    <source media="(max-width: 640px)" srcset="img/banniere-mobile.jpg" width="900" height="500">
+    <img src="img/banniere.jpg" width="1800" height="600" alt="Garlabane : code, création, jeux, graphismes, IA. Un bureau face aux collines de Provence, au coucher du soleil.">
+  </picture>
 </div>
 
 <header class="accroche">
@@ -232,13 +250,15 @@ footer { padding: 34px 0 44px; color: var(--doux); font-size: 14px; text-align: 
     <div class="suivre">
       <h2>Envie de suivre la suite&nbsp;?</h2>
       <p>Je partage tout au fur et à mesure : les projets, les tutos, les astuces et les coulisses.</p>
+      <p class="cafe-mot">Tout est gratuit. Si mes projets te servent, tu peux m'offrir un café : ça m'encourage à continuer.</p>
+      <a class="cafe-bouton" href="https://buymeacoffee.com/garlabane" target="_blank" rel="noopener">☕ M'offrir un café</a>
     </div>
   </div>
 </section>
 </main>
 
 <footer>
-  <div class="conteneur">Fait avec ♥ par Sophie · <a href="https://github.com/garlabane">garlabane sur GitHub</a></div>
+  <div class="conteneur">Fait avec ♥ par Sophie · <a href="https://github.com/garlabane">garlabane sur GitHub</a> · <a href="https://buymeacoffee.com/garlabane" target="_blank" rel="noopener">☕ M'offrir un café</a></div>
 </footer>
 </body>
 </html>
